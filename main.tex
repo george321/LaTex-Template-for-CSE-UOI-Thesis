@@ -1,0 +1,88 @@
+\documentclass[12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{ragged2e}
+\usepackage{xgreek} 
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
+\usepackage{fontspec}
+\usepackage{listings}
+\lstset{language=C}
+\renewcommand{\lstlistingname}{Snippet}% Listing -> Κώδικας
+\usepackage[backend=biber,maxbibnames=9,maxcitenames=9,style=numeric,sorting=none]{biblatex}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage[hidelinks=true,bookmarksnumbered]{hyperref}
+
+
+
+
+\fancyhead[LE,RO]{\normalfont\thepage}
+\fancyhead[LO,RE]{\fancyplain{}\slshape{\rightmark}}
+\fancyfoot{}
+
+\pagestyle{fancy}
+
+
+
+\addbibresource{references.bib}
+
+\setmainfont[Ligatures=TeX]{Times New Roman}
+\graphicspath{ {images/} }
+
+%Μορφοποιηση κωδικα
+\lstdefinestyle{mystyle}{
+    language=c,
+    basicstyle=\small\ttfamily,
+    %   basicstyle=\linespread{0.8}\small\ttfamily,
+    upquote=true,
+    stepnumber=1,
+    numbersep=8pt,
+    tabsize=2,
+    showstringspaces=false,
+    breaklines=true,
+    frame=top,
+    frame=bottom,
+    aboveskip=1.5em,
+    belowskip=1.5em,
+    captionpos=b
+}
+
+\title{Τίτλος Διπλωματικής Εργασίας}
+\author{Γιώργος Μύταρος}
+\date{Μήνας, 2018}
+
+\begin{document}
+
+\input{titlepage}
+
+\input{chapters/epitropi}
+%\input{chapters/thanks}
+
+\tableofcontents
+\chapter{Εισαγωγή}
+\input{chapters/introduction}
+
+\chapter{Υπόβαθρο}
+\input{chapters/background}
+
+\chapter{Υλοποίηση}
+\input{chapters/implementation}
+
+\chapter{Αξιολόγηση}
+\input{chapters/review}
+
+\chapter{Συμπεράσματα}
+\input{chapters/conclusion}
+
+\chapter{Παράρτημα}
+\input{chapters/code}
+
+\printbibliography[title={Βιβλιογραφία}]
+
+\end{document}
