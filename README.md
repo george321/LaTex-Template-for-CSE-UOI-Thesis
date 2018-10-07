@@ -17,3 +17,7 @@
 
 ## conclusion.tex
 εδω βαζεις τα συμπερασματα
+
+## Installation
+in ubuntu:
+sudo apt-get install texlive-full
